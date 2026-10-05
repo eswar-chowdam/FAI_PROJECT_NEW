@@ -1,5 +1,5 @@
 // Frontend API service layer communicating with FastAPI backend
-const API_BASE = `${import.meta.env.VITE_API_URL || ''}/api`;
+const API_BASE = `${(import.meta.env.VITE_API_URL || '').replace(/\/+$/, '')}/api`;
 const TOKEN_KEY = 'mindmate_token';
 const ALT_TOKEN_KEY = 'mindmate_auth_token';
 const USER_KEY = 'mindmate_user';
